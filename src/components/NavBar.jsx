@@ -8,7 +8,8 @@ const NavBar = () => {
     <nav className="flex items-center  justify-between py-6">
         <div className="flex flex-shrink-0 items-center">
             <a href="/" aria-label="Home"></a>
-              <img src={logo} alt="logo " className="h-10 mx-2 width={50}  bg-gray-400 rounded-3xl cursor-pointer" />
+             {/* TODO: 
+              <img src={logo} alt="logo " className="h-10 mx-2 width={50}  bg-gray-400 rounded-3xl cursor-pointer"/>*/ }
         </div>
 
         <div className="m-8 flex items-center justify-center gap-4 text-2xl">
