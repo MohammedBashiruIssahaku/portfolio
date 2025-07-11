@@ -1,13 +1,63 @@
 import React from 'react'
-import {PROJECTS} from "../constants"
-
+import { NavLink } from 'react-router-dom'
+import { Routes } from 'react-router-dom'
+import { Route } from 'react-router-dom'
+import Reactjs from './projects/Reactjs'
+import Nextjs from './projects/Nextjs'
+import JavaScript from './projects/JavaScript'
+import Java from './projects/Java'
+import SpringBoot from './projects/SpringBoot'
+import Nodejs from './projects/Nodejs'
+import All from './projects/All'
 
 const Projects = () => {
+
+     const navItems = [
+         {path : "/projects/languages/",  link : "All"},
+        {path : "/projects/languages/React",  link : "React"},
+        {path : "/projects/languages/NextJs",  link : "NextJs"},
+        {path : "/projects/languages/JavaScript",  link : "javaScript"},
+         {path : "/projects/languages/Java",  link : "Java"},
+        {path : "/projects/languages/SpringBoot",  link : "SpringBoot"},
+        {path : "/projects/languages/NodeJs",  link : "NodeJs"},
+     ]
+
+
+
+
   return (
-    <div className='pb-4'>
-        <h2 className='my-20 text-center text-4xl'>Projects</h2>
+    <div className='pb-4  border-2 flex flex-col'>
+        <h2 className=' text-center text-4xl'>Projects</h2>
+
+        <nav className='flex justify-center space-x-4'>
+             {
+                navItems.map(({path, link})=>(
+                    <ul key={path}>
+                        <button className="my-14"  >
+                            <NavLink to={path}>{link}</NavLink>
+                        </button>
+                    </ul>
+                )
+                )
+             }
+        </nav>
+
+        <Routes >
+            <Route path='/projects/languages/' element={<All/>}/>
+            <Route path='/projects/languages/React' element={<Reactjs/>}/>
+            <Route path='/projects/languages/NextJs' element={<Nextjs/>}/>
+            <Route path='/projects/languages/JavaScript' element={<JavaScript/>}/>
+            <Route path='/projects/languages/Java' element={<Java/>}/>
+            <Route path='/projects/languages/SpringBoot' element={<SpringBoot/>}/>
+            <Route path='/projects/languages/NodeJs' element={<Nodejs/>}/>
+        </Routes>
+
+
+
+   {/*
+
         <div>
-            {PROJECTS.map((project, index) => (
+            {PROJECTS.slice(0,10).map((project, index) => (
                 <div key={index} className='mb-8 flex flex-wrap lg:justify-center'>
                      <div className='w-full lg:w-1/4 '>
                           <img src={project.image} 
@@ -38,6 +88,8 @@ const Projects = () => {
                 </div>
             ))}
         </div>
+
+        */}
       
     </div>
   )

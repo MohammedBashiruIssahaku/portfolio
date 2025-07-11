@@ -25,9 +25,9 @@ const childVariants = {
 const Hero = () => {
   return (
     <div className='pb-4 lg:mb-36 my-28'>
-      <div className='flex flex-wrap lg:flex-row-reverse'>
-        <div className='w-full lg:w-1/2'>
-           <div className='flex justify-center lg:p-8'>
+      <div className='flex flex-wrap lg:flex-row-reverse '>
+        <div className='w-full lg:w-1/2 '>
+           <div className='flex justify-center lg:p-8 '>
              <motion.img src={ProfilePic} alt='Bashiru' 
              className='border border-stone-900 rounded-3xl' 
               width = {650}

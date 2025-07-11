@@ -5,6 +5,13 @@ import { TbBrandNextjs } from "react-icons/tb";
 import { SiMongodb } from "react-icons/si";
 import { DiRedis } from "react-icons/di";
 import { FaNodeJs } from "react-icons/fa";
+import { FaJava } from "react-icons/fa6";
+import { SiSpringboot } from "react-icons/si";
+import { IoLogoJavascript } from "react-icons/io";
+
+
+
+
 
 import {animate, motion} from "framer-motion"
 
@@ -37,12 +44,10 @@ const Technologies = () => {
          transition={{duration: 1.5}}
          className='flex flex-wrap items-center justify-center gap-4'>
 
-
              <motion.div
               initial="initial"
                  animate = "animate"
                  variants = {iconVariants(2.5)}>
-                
                   <RiReactjsLine className='text-7xl text-cyan-400'/> 
              </motion.div>
 
@@ -55,6 +60,39 @@ const Technologies = () => {
              >
                    <TbBrandNextjs className="text-7xl"/>
              </motion.div>
+                
+
+                <motion.div className='p-4'
+             initial="initial"
+                   animate = "animate"
+                   variants = {iconVariants(4)}>
+                <FaJava  className='text-7xl text-red-500'/>
+             </motion.div>
+
+
+             <motion.div className='p-4'
+             initial="initial"
+                   animate = "animate"
+                   variants = {iconVariants(5)}>
+                <SiSpringboot className='text-7xl text-green-500'/>
+             </motion.div>
+
+             
+
+             <motion.div className='p-4'
+             initial="initial"
+                   animate = "animate"
+                   variants = {iconVariants(6)}>
+                <IoLogoJavascript className="text-7xl text-yellow-500" />
+             </motion.div> 
+
+              
+              <motion.div className='p-4'
+             initial="initial"
+                   animate = "animate"
+                   variants = {iconVariants(6)}>
+                <FaNodeJs className="text-7xl text-green-500" />
+             </motion.div> 
 
 
              <motion.div className='p-4'
@@ -65,19 +103,16 @@ const Technologies = () => {
              </motion.div>
 
 
-             <motion.div className='p-4'
+            {/*
+               <motion.div className='p-4'
               initial="initial"
                    animate = "animate"
                    variants = {iconVariants(2)}>
                   <DiRedis/>
              </motion.div>
+            */} 
              
-             <motion.div className='p-4'
-             initial="initial"
-                   animate = "animate"
-                   variants = {iconVariants(6)}>
-                <FaNodeJs className="text-7xl text-green-500" />
-             </motion.div>
+             
 
              <motion.div className='p-4'
               initial="initial"
